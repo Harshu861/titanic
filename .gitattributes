@@ -1,2 +1,68 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+import pandas as pd
+df=pd.read_csv('D:/tested.csv')
+df
+
+df.describe()
+
+#numerical variables
+df['Age']
+
+df['Age'].unique()
+
+df['SibSp'].unique()
+
+df['Parch'].unique()
+
+df['Sex'].unique()
+
+df['Name'].unique()
+
+df['Cabin'].unique()
+
+df['Embarked'].unique()
+
+df['Survived'].unique()
+
+df['Pclass'].unique()
+
+df
+
+df['Fare']
+
+import pandas as pd
+import numpy as np
+from matplotlib import pyplot as plt
+import seaborn as sns
+%matplotlib inline
+
+
+
+
+
+
+
+dummy_age_list=[12,22,36,42,15,89,42,65,29,6,
+               35,81,90,51,53,53,22,31,75,5]
+dummy_sex_list=['Male','Female','Female','Male','Female','Male','Male','Male','Male','Female','Female',
+                'Female','Female','Female','Female','Female','Female','Male','Male','other']
+age_sex_df=pd.DataFrame({'Age':dummy_age_list,'Sex':dummy_sex_list})
+age_sex_df
+
+plt.figure()
+age_sex_df['Age'].hist()
+
+sns.set(style='darkgrid')
+ax=sns.countplot(x='Sex',data=age_sex_df)
+
+maths_mark=[20,18,15,25,17,16]
+science_marks=[14,16,2,15,15,12]
+english_marks=[20,18,16,15,25,10]
+mark_df=pd.DataFrame({'maths':maths_mark,'science':science_marks,'english':'english_marks'})
+mark_df
+
+mark_df.plot.bar()
+
+
+
+
+
